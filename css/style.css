@@ -71,7 +71,7 @@ body::-webkit-scrollbar-thumb {
 @media (min-width: 768px) {
   .row .subsection__title,
   .row .section__title {
-    flex: 0 0 25%;
+    flex: 0 0 40%;
   }
 }
 
@@ -267,8 +267,13 @@ body::-webkit-scrollbar-thumb {
 .section--skill .section__list {
   padding: 0 0 0 2rem;
   display: grid;
-  grid-template: repeat(4, 3.5rem) / repeat(3, 40%);
-  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 5rem;
+  list-style: none;
+}
+
+.skill__item {
+  position: relative;
 }
 
 .skill__item::after {
@@ -281,8 +286,13 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (min-width: 426px) {
 
-  .section--skill .section__list {
+  /* .section--skill .section__list {
     grid-template-columns: repeat(3, 33%);
+  } */
+
+  .section__list {
+    column-gap: 5rem;
+    /* grid-template-columns: repeat(3, 35%); */
   }
 }
 
@@ -387,4 +397,134 @@ body::-webkit-scrollbar-thumb {
   50% {
     height: 0;
   }
+}
+
+/* ---------- Logos ---------- */
+
+
+.skill__item::before {
+  --size: 4rem;
+  content: "";
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  left: calc(-1 * var(--size) - 1rem);
+  top: -1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+@media screen and (width <= 425px) {
+  .skill__item::before {
+    --size: 3rem
+  }
+}
+
+/* programming languages */
+
+
+.skill__item#javascript::before {
+  background-image: url("/images/pl/javascript.svg");
+}
+
+.skill__item#typescript::before {
+  background-image: url("/images/pl/typescript.svg");
+}
+
+.skill__item#java::before {
+  background-image: url("/images/pl/java.svg");
+}
+
+.skill__item#python::before {
+  background-image: url("/images/pl/python.svg");
+}
+
+.skill__item#csharp::before {
+  background-image: url("/images/pl/csharp.svg");
+}
+
+.skill__item#cplusplus::before {
+  background-image: url("/images/pl/cplusplus.svg");
+}
+
+.skill__item#dart::before {
+  background-image: url("/images/pl/dart.svg");
+}
+
+.skill__item#go::before {
+  background-image: url("/images/pl/go.svg");
+}
+
+.skill__item#rust::before {
+  background-image: url("/images/pl/rust.svg");
+}
+
+.skill__item#c::before {
+  background-image: url("/images/pl/c.svg");
+}
+
+
+/* technologies */
+
+
+.skill__item#django::before {
+  background-image: url("/images/tech/django.svg");
+}
+
+.skill__item#react::before {
+  background-image: url("/images/tech/react.svg");
+}
+
+.skill__item#git::before {
+  background-image: url("/images/tech/git.svg");
+}
+
+.skill__item#docker::before {
+  background-image: url("/images/tech/docker.svg");
+}
+
+.skill__item#graphql::before {
+  background-image: url("/images/tech/graphql.svg");
+}
+
+.skill__item#node::before {
+  background-image: url("/images/tech/node.svg");
+}
+
+.skill__item#sass::before {
+  background-image: url("/images/tech/sass.svg");
+}
+
+.skill__item#nest::before {
+  background-image: url("/images/tech/nest.svg");
+}
+
+.skill__item#next::before {
+  background-image: url("/images/tech/next.svg");
+}
+
+.skill__item#unity::before {
+  background-image: url("/images/tech/unity.svg");
+}
+
+.skill__item#dotnet::before {
+  background-image: url("/images/tech/dotnet.svg");
+}
+
+.skill__item#opengl::before {
+  background-image: url("/images/tech/opengl.svg");
+}
+
+.skill__item#selenium::before {
+  background-image: url("/images/tech/selenium.svg");
+}
+
+.skill__item#nginx::before {
+  background-image: url("/images/tech/nginx.svg");
+}
+
+.skill__item#three::before {
+  background-image: url("/images/tech/three.svg");
 }
