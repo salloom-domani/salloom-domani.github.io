@@ -71,7 +71,7 @@ body::-webkit-scrollbar-thumb {
 @media (min-width: 768px) {
   .row .subsection__title,
   .row .section__title {
-    flex: 0 0 40%;
+    flex: 0 0 30%;
   }
 }
 
@@ -163,7 +163,17 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and  (425px <= width <= 768px) {
+  .self-pic {
+    left: 15%;
+    width: 14rem;
+    bottom: -7rem;
+  }
+}
+
+
+
+@media screen and (min-width: 769px) {
   .self-pic {
     width: 15rem;
     bottom: -7.5rem;
@@ -179,7 +189,14 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and  (425px <= width <= 768px) {
+  .main {
+    padding-top: 5rem;
+    padding-left: 15%;
+  }
+}
+
+@media screen and (min-width: 769px) {
   .main {
     padding-top: 5rem;
     padding-left: 25%;
@@ -282,6 +299,17 @@ body::-webkit-scrollbar-thumb {
   text-align: start;
   font-size: .5em;
 }
+
+.section--skill {
+  align-items: flex-start;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.section--skill .section__title {
+  margin-bottom: 2rem;
+}
+
 
 
 @media screen and (min-width: 426px) {
