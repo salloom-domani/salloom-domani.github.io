@@ -501,6 +501,10 @@ body::-webkit-scrollbar-thumb {
   background-image: url("/images/tech/django.svg");
 }
 
+.skill__item#astro::before {
+  background-image: url("/images/tech/astro.svg");
+}
+
 .skill__item#react::before {
   background-image: url("/images/tech/react.svg");
 }
